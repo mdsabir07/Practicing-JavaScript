@@ -33,12 +33,22 @@
 
 
 // give me the sum of numbers from 1 to 30 that are divisible by 3
-let total = 0;
-for (let i = 1; i <= 30; i++) {
-    if (i % 3 === 0) {
-        console.log(i);
-        total += i;
-        console.log('Total:',total);
-    }
+// let total = 0;
+// for (let i = 1; i <= 30; i++) {
+//     if (i % 3 === 0) {
+//         console.log(i);
+//         total += i;
+//         console.log('Total:',total);
+//     }
+// }
+// console.log('Total sum of numbers:',total);
+
+// for (let i = 55; i <= 85; i++) {
+//     if (i % 5 === 0) {
+//         console.log(i)
+//     }
+// }
+
+for (let i = 0; i < 5; i += 3) {
+    console.log(i);
 }
-console.log('Total sum of numbers:',total);
