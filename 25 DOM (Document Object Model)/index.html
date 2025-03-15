@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM (Document Object Model)</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>welcome to my DOM</h1>
+    </header>
+    <main>
+        <h2>
+            My awesome DOM re baba!
+        </h2>
+        <ul>
+            <li>Muhammad paying with toys</li>
+            <li>Sabiha creating noise!</li>
+            <li>Their mother is irritate</li>
+        </ul>
+        <section id="new-section">
+            <h2 id="h2-id" class="h2-id new-class another-class abaro-class" title="title text">Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aut a dolorum quis eligendi laboriosam excepturi laborum vel doloribus! Veniam minima quis esse aperiam dolor tenetur, vel suscipit laudantium harum corrupti, repellat commodi? Velit, doloribus molestias vel aspernatur, unde delectus nam illum at veniam nihil blanditiis et, dignissimos voluptate sint!</p>
+            <ul>
+                <li class="exceptional">Lorem, ipsum.</li>
+                <li class="exceptional">Lorem, ipsum.</li>
+                <li class="exceptional">Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+            </ul>
+        </section>
+        <section class="new-container">
+            <h2 id="h2-id">Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aut a dolorum quis eligendi laboriosam excepturi laborum vel doloribus! Veniam minima quis esse aperiam dolor tenetur, vel suscipit laudantium harum corrupti, repellat commodi? Velit, doloribus molestias vel aspernatur, unde delectus nam illum at veniam nihil blanditiis et, dignissimos voluptate sint!</p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="./assets/dom.js"></script>
+    <script>
+        // option-1: getElementsByTagName
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+        for (const li of liCollection) {
+            // console.log(li.innerText);
+        }
+
+        const h1Tag = document.getElementsByTagName('h1');
+        for (const h1 of h1Tag) {
+            // console.log(h1.innerText);
+        }
+
+        // option-2: getElementById
+        const h2IdGet = document.getElementById('h2-id');
+        h2IdGet.innerText='New h2 heading by js';
+
+        // option-3: getElementsByClassName
+        const liClassExceptional = document.getElementsByClassName('exceptional');
+        liClassExceptional.innerText = 'New text change by JS';
+        // console.log(liClassExceptional);
+        for(const liClass of liClassExceptional){
+            // console.log(liClass.innerText)
+        }
+
+        // queryselectorall
+        // option-5: querySelectorAll
+        const containerLi = document.querySelectorAll('.new-container li');
+        // console.log(containerLi);
+        for(const contLi of containerLi){
+            // console.log(contLi.innerText);
+        }
+
+        // option-4: querySelector
+        const contLiFirst = document.querySelector('.new-container li');
+        contLiFirst.innerText='Chaning first li item text by js';
+        console.log(contLiFirst);
+    </script>
+</body>
+
+</html>
