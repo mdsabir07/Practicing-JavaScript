@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble events</title>
+
+    <style>
+        body {
+            border: 2px solid gold;
+            margin: 3px;
+        }
+
+        section {
+            border: 2px solid red;
+            margin: 3px;
+        }
+
+        ol {
+            border: 2px solid blue;
+            margin: 3px;
+        }
+
+        li {
+            border: 2px solid yellowgreen;
+            margin: 3px;
+        }
+    </style>
+</head>
+
+<body id="list-body">
+    <h1>Explore event bubble</h1>
+    <section id="list-section">
+        <h3>
+            Lorem, ipsum dolor.
+        </h3>
+        <ol id="list-item">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Ratione, nobis?</li>
+            <li id="item-3">Soluta, provident.</li>
+            <li id="item-4">Quibusdam, sint.</li>
+            <li id="item-5">Explicabo, veniam.</li>
+            <li id="item-6">Repellendus, soluta!</li>
+        </ol>
+
+        <script>
+            document.getElementById('item-2')
+                .addEventListener('click', function (event) {
+                    console.log('item 2 clicked');
+                    event.stopPropagation();
+                })
+
+            document.getElementById('list-item')
+                .addEventListener('click', function (event) {
+                    console.log('List item ol clicked');
+                    event.stopPropagation();
+                })
+
+            document.getElementById('list-section')
+                .addEventListener('click', function (kire) {
+                    console.log('List section clicked');
+                    kire.stopPropagation();
+                })
+
+            document.getElementById('list-body')
+                .addEventListener('click', function () {
+                    console.log('Body clicked');
+                })
+        </script>
+    </section>
+</body>
+
+</html>
