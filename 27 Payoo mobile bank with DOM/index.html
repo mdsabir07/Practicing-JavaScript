@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo mobile banking with DOM</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-800">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-50">
+        <header class="">
+            <nav class="flex justify-center items-center mt-10">
+                <div class="w-9/12 relative flex justify-center items-center my-10 mx-auto">
+                    <img class="absolute w-48 z-10" src="./assets/bg.png" alt="">
+                    <img class="absolute w-16 z-20" src="./assets/Group.png" alt="">
+                </div>
+            </nav>
+        </header>
+
+        <div class="">
+            <div class="hero-content">
+                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-md">
+                    <form class="card-body">
+                        <fieldset class="fieldset">
+                            <label class="fieldset-label">Mobile Number</label>
+                            <input type="tel" class="input" id="phone-number" maxlength="11" name="phone" placeholder="Enter your number" required/>
+                            <label class="fieldset-label">4 Digit Pin</label>
+                            <input type="text" pattern="^\d+$" maxlength="4" class="input" name="numberInput" id="numberInput" placeholder="Enter 4 Digit Pin" required />
+                            <button id="btn-login" class="btn btn-neutral mt-4">Login</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
